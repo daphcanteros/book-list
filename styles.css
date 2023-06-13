@@ -15,3 +15,6 @@ body {
     color: transparent;
     -webkit-text-stroke: 0.9px #55C9DF;
 }
+.warning {
+    background-color: rgb(255,232,232);
+}

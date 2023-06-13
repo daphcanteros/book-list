@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" /> 
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!--header-->
@@ -23,21 +23,21 @@
     <!--input a book list-->
     <div class="container my-5">
         <div class="p-5 bg-body-tertiary rounded-3" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-            <h1 class="text-body-emphasis text-center">Create a Book List</h1>
+            <h1 class="text-body-emphasis text-center" id="heading">Create a Book List</h1>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Book Name:</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter title of a book">
+                <label for="book-title" class="form-label">Book Title:</label>
+                <input type="text" class="form-control" id="book-title" autocomplete="off" />
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Author Name:</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter name of author">
+                <label for="author-name" class="form-label">Author Name:</label>
+                <input type="text" class="form-control" id="author-name" autocomplete="off" />
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Year Published:</label>
-                <input type="text" class="form-control mb-5" id="exampleFormControlInput1" placeholder="e.g. 1995">
+                <label for="published-year" class="form-label">Year Published:</label>
+                <input type="text" class="form-control mb-5" id="published-year" autocomplete="off" />
             </div>
             <div class="d-grid gap-2 mb-3">
-                <button class="btn btn-dark btn-lg" type="button">Submit <i class='bx bxs-edit-alt' style='color:#ffffff'  ></i></button>
+                <button class="btn btn-dark btn-lg" type="submit">Submit <i class='bx bxs-edit-alt' style='color:#ffffff'  ></i></button>
             </div>
         </div>
     </div>
@@ -54,12 +54,8 @@
                         <th scope="col">Year Published</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr id="list">
-                        <!--<td></td>
-                        <td></td>
-                        <td></td>-->
-                    </tr>
+                <tbody class="book-list"> 
+                    <!--content created will append here-->
                 </tbody>
             </table>
         </div>
